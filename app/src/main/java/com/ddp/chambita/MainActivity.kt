@@ -2,7 +2,7 @@ package com.ddp.chambita
 
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
+import android.widget.TextView
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    public var owner = User("Naydeline Gonzalez", "nayde","gr210052@alumno.udb.edu.sv", "", "12345678")
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -38,6 +40,12 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val headerLayout = binding.navView.getHeaderView(0)
+        val nameTextView = headerLayout.findViewById<TextView>(R.id.username)
+        nameTextView.text = owner.username
+        val emailTextView = headerLayout.findViewById<TextView>(R.id.name)
+        emailTextView.text = owner.name
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
