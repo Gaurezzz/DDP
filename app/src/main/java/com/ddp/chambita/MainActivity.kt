@@ -12,13 +12,14 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.ddp.chambita.databinding.ActivityMainBinding
+import de.hdodenhof.circleimageview.CircleImageView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
-    public var owner = User("Naydeline Gonzalez", "nayde","gr210052@alumno.udb.edu.sv", "", "12345678")
+    public var owner = User("Naydeline Gonzalez", "nayde","gr210052@alumno.udb.edu.sv", "12345678")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -46,6 +47,12 @@ class MainActivity : AppCompatActivity() {
         nameTextView.text = owner.username
         val emailTextView = headerLayout.findViewById<TextView>(R.id.name)
         emailTextView.text = owner.name
+
+        val resourceID = resources.getIdentifier(owner.username, "drawable", applicationContext.packageName)
+        val pictureView = headerLayout.findViewById<CircleImageView>(R.id.profile_image)
+        if (resourceID != 0) {
+            pictureView.setImageResource(resourceID)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

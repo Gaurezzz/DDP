@@ -1,11 +1,10 @@
 package com.ddp.chambita
 
 class User (
-    val name: String,
-    val username: String,
-    val email: String,
-    val picture: String,
-    val password: String
+    var name: String,
+    var username: String,
+    var email: String,
+    var password: String
 ) {
 
 }
