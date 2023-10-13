@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     public var owner = User("Naydeline Gonzalez", "nayde","gr210052@alumno.udb.edu.sv", "12345678")
+    var trabajadores = workerEx;
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
