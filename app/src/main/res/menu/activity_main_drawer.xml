@@ -9,9 +9,9 @@
             android:icon="@drawable/home"
             android:title="@string/menu_explorar" />
         <item
-            android:id="@+id/nav_destacados"
-            android:icon="@drawable/destacado"
-            android:title="@string/menu_destacados" />
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/favorite"
+            android:title="@string/menu_favoritos" />
         <item
             android:id="@+id/nav_ajustes"
             android:icon="@drawable/settings"

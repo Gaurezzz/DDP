@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_destacados"
+        android:id="@+id/nav_favoritos"
         android:name="com.ddp.chambita.ui.gallery.GalleryFragment"
-        android:label="@string/menu_destacados"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="@string/menu_favoritos"
+        tools:layout="@layout/fragment_favoritos" />
 
     <fragment
         android:id="@+id/nav_ajustes"
         android:name="com.ddp.chambita.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_ajustes"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_ajustes" />
 </navigation>

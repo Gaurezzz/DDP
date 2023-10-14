@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/hearth"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/favoritebaseline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/favoritebaseline" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toEndOf="@+id/worker_image"
+        app:layout_constraintTop_toBottomOf="@+id/workerJob" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toEndOf="@+id/star1"
+        app:layout_constraintTop_toBottomOf="@+id/workerJob" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/star2"
+        app:layout_constraintTop_toBottomOf="@+id/workerJob" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toEndOf="@+id/star4"
+        app:layout_constraintTop_toBottomOf="@+id/workerJob" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toEndOf="@+id/star3"
+        app:layout_constraintTop_toBottomOf="@+id/workerJob" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/worker_image"
+        android:layout_width="123dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/star1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/usertemp" />
+
+    <TextView
+        android:id="@+id/workerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/worker_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nombre del trabajador" />
+
+    <TextView
+        android:id="@+id/workerJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/worker_image"
+        app:layout_constraintTop_toBottomOf="@+id/workerName"
+        tools:text="Profesion u oficio" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/champagnePink"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

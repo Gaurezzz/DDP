@@ -2,6 +2,7 @@ package com.ddp.chambita
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,6 +12,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ddp.chambita.databinding.ActivityMainBinding
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -20,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     public var owner = User("Naydeline Gonzalez", "nayde","gr210052@alumno.udb.edu.sv", "12345678")
-    var trabajadores = workerEx;
+    var trabajadores = workerExamples.workerEx
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -37,11 +40,15 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_explorar, R.id.nav_destacados, R.id.nav_ajustes
+                R.id.nav_explorar, R.id.nav_favoritos, R.id.nav_ajustes
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        initNavHeader()
+    }
+    fun initNavHeader(){
 
         val headerLayout = binding.navView.getHeaderView(0)
         val nameTextView = headerLayout.findViewById<TextView>(R.id.username)
@@ -55,7 +62,6 @@ class MainActivity : AppCompatActivity() {
             pictureView.setImageResource(resourceID)
         }
     }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
