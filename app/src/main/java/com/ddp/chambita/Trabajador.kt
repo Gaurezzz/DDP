@@ -11,7 +11,8 @@ class Trabajador(
     var experienceYears: Int,
     var description: String,
     var insignias: List<String> = listOf(),
-    var favorito: Char = 'n'
+    var favorito: Char = 'n',
+    var telefono: String
 ) {
 
 }

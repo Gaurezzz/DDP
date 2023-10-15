@@ -5,8 +5,10 @@ import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
-import android.view.LayoutInflater
+import androidx.navigation.findNavController
+
 
 class TrabajadorViewHolder (view: View, private val context: Context):RecyclerView.ViewHolder(view){
 
@@ -35,12 +37,13 @@ class TrabajadorViewHolder (view: View, private val context: Context):RecyclerVi
         else if (cantidad > i-1) wstar.setImageResource(halfstar)
         else wstar.setImageResource(nostar)
     }
-    fun render(worker: Trabajador) {
+    fun render(worker: Trabajador, navController: NavController) {
         workerName.text = worker.name
         job.text = worker.job
 
         //Imagen de perfil
-        val resourceID = context.resources.getIdentifier(worker.username, "drawable", context.packageName)
+        val resourceID =
+            context.resources.getIdentifier(worker.username, "drawable", context.packageName)
         picture.setImageResource(resourceID)
 
         //Para elegir las imagenes de estrellas
@@ -54,18 +57,17 @@ class TrabajadorViewHolder (view: View, private val context: Context):RecyclerVi
         if (worker.favorito == 'y') hearth.setImageResource(corazon)
         else hearth.setImageResource(corazonlineal)
 
-        hearth.setOnClickListener(){
-            if (worker.favorito == 'y'){
+        hearth.setOnClickListener() {
+            if (worker.favorito == 'y') {
                 worker.favorito = 'n'
                 hearth.setImageResource(corazonlineal)
-            }
-            else{
+            } else {
                 worker.favorito = 'y'
                 hearth.setImageResource(corazon)
             }
         }
         cuadro.setOnClickListener(){
-            val ventana = DetallesTrabajador(LayoutInflater.from(context).inflate(R.layout.item_worker, , false), context)
+            navController.navigate(R.id.nav_detalles_trabajador)
         }
     }
 }

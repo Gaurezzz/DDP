@@ -13,6 +13,7 @@ import com.ddp.chambita.R
 import com.ddp.chambita.TrabajadorAdapter
 import com.ddp.chambita.databinding.FragmentHomeBinding
 import com.ddp.chambita.workerExamples
+import androidx.navigation.fragment.findNavController
 
 class HomeFragment : Fragment() {
 
@@ -37,16 +38,23 @@ class HomeFragment : Fragment() {
 
         val recyclerView = binding.root.findViewById<RecyclerView>(R.id.trabajadores)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = TrabajadorAdapter(trabajadores, requireContext())
+        recyclerView.adapter = TrabajadorAdapter(trabajadores, requireContext(), findNavController())
+
 
         return root
     }
 
+    fun abrirDetalles (fragment: Fragment){
+        val navController = this.findNavController()
+        navController.navigate(R.id.detalles)
+    }
+
     override fun onResume() {
         super.onResume()
+
         val recyclerView = binding.root.findViewById<RecyclerView>(R.id.trabajadores)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = TrabajadorAdapter(trabajadores, requireContext())
+        recyclerView.adapter = TrabajadorAdapter(trabajadores, requireContext(), findNavController())
     }
 
     override fun onDestroyView() {

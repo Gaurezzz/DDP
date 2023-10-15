@@ -14,6 +14,7 @@ import com.ddp.chambita.Trabajador
 import com.ddp.chambita.databinding.FragmentFavoritosBinding
 import com.ddp.chambita.workerExamples
 import android.util.Log
+import androidx.navigation.fragment.findNavController
 
 class GalleryFragment : Fragment() {
 
@@ -49,7 +50,7 @@ class GalleryFragment : Fragment() {
         val recyclerView = binding.root.findViewById<RecyclerView>(R.id.favoritos)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         listaFavoritos()
-        recyclerView.adapter = FavoritosAdapter(favoritos, requireContext())
+        recyclerView.adapter = FavoritosAdapter(favoritos, requireContext(), findNavController())
 
         galleryViewModel.text.observe(viewLifecycleOwner) {
 
@@ -62,7 +63,7 @@ class GalleryFragment : Fragment() {
         val recyclerView = binding.root.findViewById<RecyclerView>(R.id.favoritos)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         listaFavoritos()
-        recyclerView.adapter = FavoritosAdapter(favoritos, requireContext())
+        recyclerView.adapter = FavoritosAdapter(favoritos, requireContext(), findNavController())
     }
 
     override fun onDestroyView() {

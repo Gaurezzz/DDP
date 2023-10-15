@@ -18,7 +18,9 @@ object workerExamples{
                     "Comprendo que cada proyecto es único y personal. Trabajaré contigo estrechamente para entender tus visiones y necesidades, sin importar si se trata de un proyecto pequeño o grande.\n" +
                     "\n" +
                     "Contáctame hoy mismo para obtener un presupuesto gratuito y sin compromiso. Puedes confiar en mí para convertir tus ideas en realidad.",
-            listOf("+5años","personalizado","amabilidad", "certificacion")
+            listOf("+5años","personalizado","amabilidad", "certificacion"),
+            'n',
+            "+(503) 71234567"
         ),
         Trabajador(
             "gg211703",
@@ -34,7 +36,9 @@ object workerExamples{
                     "Ofrezco una amplia gama de servicios, desde el diseño de dispositivos médicos hasta la optimización de sistemas de atención médica. Mi experiencia abarca desde la investigación hasta la implementación práctica.\n" +
                     "\n" +
                     "Si estás buscando soluciones tecnológicas avanzadas para tu clínica, laboratorio o proyecto de investigación, estoy aquí para ayudarte. Colaboraremos estrechamente para diseñar, desarrollar y aplicar soluciones biomédicas a medida que se adapten a tus necesidades.",
-            listOf("excelencia", "TOEFL", "5estrellas")
+            listOf("excelencia", "TOEFL", "5estrellas"),
+            'n',
+            "+(503) 71234567"
         ),
         Trabajador(
             "me211000",
@@ -52,7 +56,9 @@ object workerExamples{
                     "Si experimentas síntomas molestos o preocupantes, no dudes en contactarme. Realizaré una evaluación exhaustiva y te brindaré un plan de tratamiento personalizado.\n" +
                     "\n" +
                     "La salud es un regalo que debemos proteger. ¡Ponte en contacto conmigo y juntos trabajaremos para garantizar que te sientas lo mejor posible!",
-            listOf("+20años", "especialización internacional")
+            listOf("+20años", "especialización internacional"),
+            'n',
+            "+(503) 71234567"
         ),
         Trabajador(
             "gc210667",
@@ -68,7 +74,9 @@ object workerExamples{
                     "Ofrezco servicios de interpretación en una variedad de idiomas, asegurando una comunicación efectiva en situaciones clave. Mi compromiso es la precisión y la confidencialidad.\n" +
                     "\n" +
                     "Si necesitas un intérprete experimentado para facilitar la comunicación y asegurarte de que todos se entiendan, no dudes en contactarme. Estoy listo para ser tu enlace lingüístico en cualquier contexto.",
-            listOf("especialización internacional", "TOEFL", "Plurilingue", "habilidades blandas", "nocturno")
+            listOf("especialización internacional", "TOEFL", "Plurilingue", "habilidades blandas", "nocturno"),
+            'n',
+            "+(503) 71234567"
         ),
         Trabajador(
             "rp210191",
@@ -84,7 +92,9 @@ object workerExamples{
                     "Ofrezco servicios de cuidado infantil personalizados, adaptados a las necesidades específicas de tus hijos. Desde juegos educativos hasta actividades creativas, mi enfoque es fomentar el crecimiento y desarrollo saludable.\n" +
                     "\n" +
                     "Si estás buscando una niñera de confianza para cuidar y nutrir a tus pequeños, no dudes en contactarme. Estoy aquí para ser una extensión de tu amor y cuidado cuando no puedes estar presente.",
-            listOf("5estrellas","amabilidad")
+            listOf("5estrellas","amabilidad"),
+            'n',
+            "+(503) 71234567"
         ),
         Trabajador(
             "ah210977",
@@ -96,7 +106,9 @@ object workerExamples{
             "Diseñador web",
             2,
             "¡Hola! Soy un apasionado diseñador gráfico con 2 años de experiencia en la industria. Mi objetivo es transformar ideas en diseños sorprendentes. A lo largo de mi carrera, he trabajado en una amplia gama de proyectos, desde identidades de marca hasta ilustraciones, diseño de sitios web y más.",
-            listOf("amabilidad")
+            listOf("amabilidad"),
+            'n',
+            "+(503) 71234567"
         ),
         Trabajador(
             "ss210671",
@@ -108,7 +120,9 @@ object workerExamples{
             "Conductor privado",
             4,
             "Ofrezco servicios de transporte para satisfacer tus necesidades de desplazamiento. Estoy comprometido a proporcionar viajes cómodos y seguros a mis clientes. Ya sea que necesites un traslado al aeropuerto o una entrega local, estoy aquí para ofrecerte un servicio confiable y puntual. Contáctame para reservar tu próximo viaje sin complicaciones.",
-            listOf("amabilidad", "plurilingue", "TOEFL", "certificacion internacional", "licencia de conduccion")
+            listOf("amabilidad", "plurilingue", "TOEFL", "certificacion internacional", "licencia de conduccion"),
+            'n',
+            "+(503) 71234567"
         )
     )
 }

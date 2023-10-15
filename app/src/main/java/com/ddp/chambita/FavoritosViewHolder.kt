@@ -2,8 +2,11 @@ package com.ddp.chambita
 
 import android.view.View
 import android.content.Context
+import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 
 class FavoritosViewHolder (view: View, private val context: Context):RecyclerView.ViewHolder(view){
@@ -17,6 +20,7 @@ class FavoritosViewHolder (view: View, private val context: Context):RecyclerVie
     private val star4 = view.findViewById<ImageView>(R.id.star4)
     private val star5 = view.findViewById<ImageView>(R.id.star5)
     private val hearth = view.findViewById<ImageView>(R.id.hearth)
+    private val cuadro = view.findViewById<ConstraintLayout>(R.id.box)
 
     //Imagenes de estrellas
     private val star = context.resources.getIdentifier("fullstar", "drawable", context.packageName)
@@ -26,13 +30,14 @@ class FavoritosViewHolder (view: View, private val context: Context):RecyclerVie
     //corazones
     private val corazon = context.resources.getIdentifier("favoriteblue", "drawable", context.packageName)
     private val corazonlineal = context.resources.getIdentifier("favoritebaseline", "drawable", context.packageName)
+
     fun chooseStar(wstar: ImageView, cantidad: Double, i:Int){
 
         if (cantidad >= i) wstar.setImageResource(star)
         else if (cantidad > i-1) wstar.setImageResource(halfstar)
         else wstar.setImageResource(nostar)
     }
-    fun render(worker: Trabajador, favoritosList: MutableList<Trabajador>, adapter: FavoritosAdapter) {
+    fun render(worker: Trabajador, favoritosList: MutableList<Trabajador>, adapter: FavoritosAdapter, navController: NavController) {
         workerName.text = worker.name
         job.text = worker.job
 
@@ -65,6 +70,10 @@ class FavoritosViewHolder (view: View, private val context: Context):RecyclerVie
                 worker.favorito = 'y'
                 hearth.setImageResource(corazon)
             }
+        }
+
+        cuadro.setOnClickListener(){
+            navController.navigate(R.id.nav_detalles_trabajador)
         }
     }
 }

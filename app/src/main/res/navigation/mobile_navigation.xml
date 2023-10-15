@@ -6,6 +6,10 @@
     app:startDestination="@+id/nav_explorar">
 
     <fragment
+        android:id="@+id/nav_detalles_trabajador"
+        android:name="com.ddp.chambita.ui.detallesTrabajador.DetallesTrabajador"
+        tools:layout="@layout/fragment_detalles_trabajador" />
+    <fragment
         android:id="@+id/nav_explorar"
         android:name="com.ddp.chambita.ui.home.HomeFragment"
         android:label="@string/menu_explorar"

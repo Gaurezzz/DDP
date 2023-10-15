@@ -4,9 +4,10 @@ import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
+import androidx.navigation.NavController
 
 
-class FavoritosAdapter(private val favoritosList: MutableList<Trabajador>, private val context: Context): RecyclerView.Adapter<FavoritosViewHolder>(){
+class FavoritosAdapter(private val favoritosList: MutableList<Trabajador>, private val context: Context, private val navController: NavController): RecyclerView.Adapter<FavoritosViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritosViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return FavoritosViewHolder(layoutInflater.inflate(R.layout.item_worker, parent, false), context)
@@ -16,7 +17,7 @@ class FavoritosAdapter(private val favoritosList: MutableList<Trabajador>, priva
 
     override fun onBindViewHolder(holder: FavoritosViewHolder, position: Int) {
         val item = favoritosList[position]
-        holder.render(item, favoritosList, this)
+        holder.render(item, favoritosList, this, navController)
     }
 
 }
